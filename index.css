@@ -8,7 +8,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: none;
   }
   
   .logo img {
@@ -58,11 +58,81 @@ body {
     height: 3px;
     background-color: #333;
   }
+
+  body {
+    margin: 50;
+    margin-top: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 6em;
+    line-height: 1;
+    margin: 0;
+}
+
+.highlight {
+    color: #f6a607; /* Yellow highlight */
+    font-weight: bold;
+}
+
+.highlight-blue {
+    color: #3aa9e3; /* Blue highlight */
+    font-weight: bold;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.image-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+
   
   /* Mobile View */
   @media (max-width: 768px) {
     .navbar {
-      border-bottom: 2px solid #ffcc00; /* হলুদ লাইন শুধুমাত্র মোবাইল ভিউতে */
+      border-bottom: 2px solid #ffcc00;
     }
   
     .nav-links {
@@ -91,3 +161,42 @@ body {
     }
   }
   
+
+  /* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column-reverse; /* Reverse order: content comes after the image */
+        align-items: center;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    .image-container {
+        max-width: 50%;
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .blue-bg, .orange-bg {
+        width: 80px;
+        height: 160px;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 8px 16px;
+    }
+}
+
+
+ 
